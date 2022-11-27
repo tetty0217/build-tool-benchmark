@@ -1,4 +1,3 @@
-import * as fs from 'fs';
 import * as path from 'path';
 import {build, BuildOptions, serve} from 'esbuild';
 import dayjs from "dayjs";
@@ -6,7 +5,6 @@ import dayjs from "dayjs";
 const NODE_ENV = process.env.NODE_ENV ?? 'development';
 const isDev = NODE_ENV === 'development';
 const isWatch = process.env.WATCH === 'true' || false;
-const metafile = process.env.META_FILE === 'true' || false;
 
 // webpackのdefine pluginと同じ
 const define: BuildOptions['define'] = {

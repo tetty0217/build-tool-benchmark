@@ -1,5 +1,9 @@
 import './App.css';
 import React from "react";
+import image from "./Image";
+
+const Text = React.lazy(() => import("./Text"))
+const Image = React.lazy(() => import("./Image"))
 
 function App() {
   const [count, setCount ] = React.useState(0)
@@ -14,7 +18,7 @@ function App() {
 }
 
 const Test = ({count}: {count: number}) => {
-  return <p><span>{count}</span></p>
+  return <div><Text text={`${count}pt`}/><Image src="https://seeklogo.com/images/E/esbuild-logo-21E74350B7-seeklogo.com.png" alt="esbuild logo"/></div>
 }
 
 export default App;
